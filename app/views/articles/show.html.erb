@@ -4,5 +4,7 @@
 <p><%= @article.stars %></p>
 <%= link_to "EDIT", edit_article_path(@article) %>
 <br>
-
+<h2>REVIEWS SECTION</h2>
+<%= link_to "LEAVE A REVIEW", new_article_review_path(@article) %>
+<br>
 <%= link_to "RETOUR", articles_path %>
