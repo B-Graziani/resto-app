@@ -1,0 +1,8 @@
+<h1>SHOW ARTICLE</h1>
+<h2><%= @article.title %></h2>
+<p><%= @article.body %></p>
+<p><%= @article.stars %></p>
+<%= link_to "EDIT", edit_article_path(@article) %>
+<br>
+
+<%= link_to "RETOUR", articles_path %>
