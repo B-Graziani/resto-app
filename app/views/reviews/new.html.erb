@@ -1,14 +1,5 @@
 <h1>NEW REVIEW</h1>
-<%= form_with model: [ @article, @article.comments.build ] do |form| %>
-  <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+<%= simple_form_for [@article, @review] do |f| %>
+<%= f.input :content %>
+<%= f.submit "envoyer" %>
 <% end %>

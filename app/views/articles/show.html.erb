@@ -7,4 +7,16 @@
 <h2>REVIEWS SECTION</h2>
 <%= link_to "LEAVE A REVIEW", new_article_review_path(@article) %>
 <br>
+<ul>
+  <% @article.reviews.each do |review| %>
+  <li>
+    <%= review.content %>
+    <%= link_to "DELETE", review, method: :delete, data: { confirm: "are you sure ?"} %>
+  </li>
+  <% end %>
+</ul>
+<br>
 <%= link_to "RETOUR", articles_path %>
+
+
+
